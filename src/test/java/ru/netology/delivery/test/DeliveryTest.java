@@ -17,6 +17,7 @@ class DeliveryTest {
 
     @BeforeEach
     void setup() {
+
         open("http://localhost:9999");
     }
 
@@ -24,17 +25,18 @@ class DeliveryTest {
     @Test
     @DisplayName("Should successful plan  meeting")
     void shouldSuccessfulPlanMeeting() {
+
         var validUser = DataGenerator.Registration.generateUser("ru");
 
         var firstMeetingDate = DataGenerator.generateDate(5);
         var secondMeetingDate = DataGenerator.generateDate(9);
 
         $("[data-test-id='city'] input").setValue(validUser.getCity());
-        $("[data-test-id=date] input").press(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
+        $("[data-test-id='date'] input").press(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
         $("[data-test-id='date'] input").setValue(firstMeetingDate);
         $("[data-test-id='name'] input").setValue(validUser.getName());
         $("[data-test-id='phone'] input").setValue(validUser.getPhone());
-        $("[data-test-id=agreement]").click();
+        $("[data-test-id='agreement']").click();
         $(Selectors.byText("Запланировать")).click();
         $(Selectors.withText("Успешно!")).shouldBe(visible, Duration.ofSeconds(15));
         $("[data-test-id='success-notification'] .notification__content")
