@@ -22,7 +22,7 @@ class DeliveryTest {
 
 
     @Test
-    @DisplayName("Should successful plan  meeting")
+    @DisplayName("Should successful plan meeting")
     void shouldSuccessfulPlanMeeting() {
 
         var validUser = DataGenerator.Registration.generateUser("ru");
