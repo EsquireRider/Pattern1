@@ -1,3 +1,2 @@
 [![Java CI with Gradle](https://github.com/EsquireRider/Pattern1/actions/workflows/gradle.yml/badge.svg)](https://github.com/EsquireRider/Pattern1/actions/workflows/gradle.yml)
-https://prnt.sc/pqRnx2qhpIQD
-![img.png](img.png)
+![img_1.png](img_1.png)![img.png](img.png)
